@@ -130,10 +130,12 @@ function callback_weathersv( $atts ) {
 	
 
 	//set pic for active/inactive channel
-	if($active=='1'){
+	if($active=='1'){		
 		$star = '/wp-content/plugins/weathersv-channel/images/active.png';
+		$activeText = 'Channel is Active';
 	}else{
 		$star = '/wp-content/plugins/weathersv-channel/images/inactive.png';
+		$activeText = 'Channel is Inactive';
 	}
 	
 	
@@ -142,7 +144,7 @@ function callback_weathersv( $atts ) {
 	$html .= '<div style="padding-right:2px;width:262px;display:inline-block;font-size:14px">';
 	$html .= '<table style="border-style:ridge;border-color:#D6DBDF">';
 	$html .= '<tr>';
-	$html .= '<td style="padding:0px"><image title="Example of title text" src="' . $star . '" style="width:32px"></td>';	
+	$html .= '<td style="padding:0px"><image title="' . $activeText . '" src="' . $star . '" style="width:32px"></td>';	
 	$html .= '<td><a href="https://weathersv.app/channel/' . $channelID . '" target="_blank"  rel="noopener">' . $name . ', ' . $country . '</a></td>';
 	$html .= '<td style="padding:0px"><image src="' . $img . '" style="width:24px"></td>';
 	$html .= '<td>' . $temperature . '<span>&#8451;</span></td>';
